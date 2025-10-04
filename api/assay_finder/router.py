@@ -270,12 +270,16 @@ def _build_params(
 
 async def _fetch_assays(params: List[Tuple[str, str]]) -> Any:
     try:
+        logger.info("Fetching assays with params: %s", params)
         async with httpx.AsyncClient(timeout=20.0, follow_redirects=True) as client:
+            logger.info("Requesting OSDR: %s", ASSAYS_BASE)
             r = await client.get(ASSAYS_BASE, params=params)
+            logger.info("OSDR response status: %s", r.status_code)
             if r.status_code >= 400:
                 raise HTTPException(status_code=r.status_code, detail=f"OSDR error: {r.text}")
             return r.json()
     except HTTPException:
         raise
     except Exception as e:
+        logger.error("Error fetching assays: %s", e)
         raise HTTPException(status_code=502, detail=f"Error consultando OSDR: {e}")
