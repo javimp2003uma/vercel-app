@@ -65,7 +65,9 @@ async def search_assays(
 # ----------------- AI -----------------
 
 def _get_filter_from_natural_language(request: Request, user_input) -> Dict[str, Optional[str]]:
+    logger.info("estoy aqui 1")
     prompt = GetFilterPrompt(user_input)
+    logger.info("estoy aqui 2")
     response_text, _ = request.app.state.provider.prompt(
         model="gpt-3.5-turbo",
         prompt_system=prompt.get_prompt_system(),
@@ -73,13 +75,17 @@ def _get_filter_from_natural_language(request: Request, user_input) -> Dict[str,
         user_input=prompt.get_user_prompt(),
         parameters_json=prompt.get_parameters(),
     )
+    logger.info("estoy aqui 3")
     if not response_text:
         raise HTTPException(status_code=500, detail="No se obtuvo respuesta de la IA.")
 
     import json
+    logger.info("estoy aqui 4")
     try:
         response = json.loads(response_text)
+        logger.info("estoy aqui 5")
     except Exception:
+        logger.info("estoy aqui 6")
         start = response_text.find("{"); end = response_text.rfind("}")
         if start == -1 or end == -1:
             raise HTTPException(status_code=500, detail="No se pudo parsear JSON de la respuesta.")
