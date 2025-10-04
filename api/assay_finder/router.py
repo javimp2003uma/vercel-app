@@ -82,8 +82,7 @@ def _get_filter_from_natural_language(request: Request, user_input) -> Dict[str,
         prompt_system=prompt.get_prompt_system(),
         messages_json="",
         user_input=prompt.get_user_prompt(),
-        parameters_json=prompt.get_parameters(),
-        logger_spec = logger
+        parameters_json=prompt.get_parameters()
     )
     logger.info("estoy aqui 3")
     if not response_text:

@@ -22,7 +22,7 @@ class OpenAIProvider(APIProvider):
         self.client = openai.OpenAI(api_key=api_key)
         self.formatter = OpenAIFormatter()
 
-    def prompt(self, model, prompt_system, messages_json, user_input, parameters_json, logger_spec):       
+    def prompt(self, model, prompt_system, messages_json, user_input, parameters_json):       
         if not model:
             model = MODELS.GPT_3_5_TURBO
 
@@ -35,11 +35,9 @@ class OpenAIProvider(APIProvider):
             "max_tokens": parameters.get("max_tokens", 60)
         }
 
-        logger_spec.info(f"Im here 1")
 
         response = self.client.chat.completions.create(model=model, messages=messages, **final_parameters)
 
-        logger_spec.info(f"Im here 2")
 
         return response.choices[0].message.content, model
         
