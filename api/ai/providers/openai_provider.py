@@ -5,6 +5,10 @@ from enum import Enum
 
 from .api_provider import APIProvider
 from ..prompt_formatters import OpenAIFormatter
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 class MODELS(str, Enum):
     GPT_3_5_TURBO = "gpt-3.5-turbo"
@@ -29,7 +33,11 @@ class OpenAIProvider(APIProvider):
             "max_tokens": parameters.get("max_tokens", 60)
         }
 
+        logger.info(f"Im here 1")
+
         response = self.client.chat.completions.create(model=model, messages=messages, **final_parameters)
+
+        logger.info(f"Im here 2")
 
         return response.choices[0].message.content, model
         
