@@ -8,12 +8,20 @@ from ai import GetFilterPrompt
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
 router = APIRouter()
 
 ASSAYS_BASE = "https://visualization.osdr.nasa.gov/biodata/api/v2/query/assays/"
 META_BASE = "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/"
 DATASET_BASE = "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset"
 DEFAULT_FORMAT = "json.records"
+
+logger.info(f"OpenAI API Key: {os.getenv('OPENAI_API_KEY')} router")
+
 
 @router.get("/assays/search")
 async def search_assays(

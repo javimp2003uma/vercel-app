@@ -26,6 +26,7 @@ logger = logging.getLogger(__name__)
 load_dotenv(override=True)
 
 FRONTEND_URLS = os.getenv("FRONTEND_URLS", "")  # "https://midominio.com,https://preview.vercel.app"
+logger.info("OpenAI API Key: %s", os.getenv("OPENAI_API_KEY"))
 
 def key_func(request: Request) -> str:
     fwd = request.headers.get("x-forwarded-for")
@@ -39,7 +40,7 @@ async def lifespan(app: FastAPI):
     chatbot = make_chatbot(settings)
 
     app.state.chat_service = ChatService(store, chatbot)
-    logger.info("OpenAI API Key: %s", os.getenv("OPENAI_API_KEY"))
+    
     app.state.provider = OpenAIProvider(api_key=os.getenv("OPENAI_API_KEY"))
 
     yield
