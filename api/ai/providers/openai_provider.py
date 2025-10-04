@@ -26,6 +26,8 @@ class OpenAIProvider(APIProvider):
         if not model:
             model = MODELS.GPT_3_5_TURBO
 
+        logger.info("Im here 0")
+
         messages = self.formatter.format(prompt_system, messages_json, user_input)
         parameters = json.loads(parameters_json) if parameters_json else {}
         final_parameters = {
