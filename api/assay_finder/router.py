@@ -20,7 +20,7 @@ META_BASE = "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/"
 DATASET_BASE = "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset"
 DEFAULT_FORMAT = "json.records"
 
-logger.info(f"OpenAI API Key: {os.getenv('OPENAI_API_KEY')} router")
+
 
 
 @router.get("/assays/search")
@@ -32,6 +32,7 @@ async def search_assays(
     exclude_na: bool = Query(True, description="Hide 'Not Applicable' conditions in groups")
 ):
     logger.info("Searching assays with parameters: %s", locals())
+    logger.info(f"OpenAI API Key: {os.getenv('OPENAI_API_KEY')} router")
     # 1) NL -> filtros
     params = _get_filter_from_natural_language(request, q)
 
