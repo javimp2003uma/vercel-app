@@ -17,6 +17,11 @@ from graphbot.factory import make_store, make_chatbot
 
 from ai import OpenAIProvider
 
+# crea un logger
+import logging
+logger = logging.getLogger("uvicorn.error")
+
+
 load_dotenv(override=True)
 
 FRONTEND_URLS = os.getenv("FRONTEND_URLS", "")  # "https://midominio.com,https://preview.vercel.app"
@@ -33,6 +38,7 @@ async def lifespan(app: FastAPI):
     chatbot = make_chatbot(settings)
 
     app.state.chat_service = ChatService(store, chatbot)
+    logger.info("OpenAI API Key: %s", os.getenv("OPENAI_API_KEY"))
     app.state.provider = OpenAIProvider(api_key=os.getenv("OPENAI_API_KEY"))
 
     yield
