@@ -19,7 +19,8 @@ from ai import OpenAIProvider
 
 # crea un logger
 import logging
-logger = logging.getLogger("uvicorn.error")
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 load_dotenv(override=True)
