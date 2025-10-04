@@ -1,0 +1,6 @@
+fastapi>=0.115
+openai
+asyncio
+uvicorn
+dotenv
+pydantic-settings
