@@ -5,8 +5,6 @@ from fastapi import APIRouter, HTTPException, Query, Request
 import logging
 from ..ai import GetFilterPrompt
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
 
 from dotenv import load_dotenv
 import os
@@ -31,16 +29,12 @@ async def search_assays(
     limit_per_tech: int = Query(3, ge=1, le=50, description="Max assays per technology group"),
     exclude_na: bool = Query(True, description="Hide 'Not Applicable' conditions in groups")
 ):
-    logger.info("Searching assays with parameters: %s", locals())
-    logger.info(f"OpenAI API Key: {os.getenv('OPENAI_API_KEY')} router")
     # 1) NL -> filtros
     params = _get_filter_from_natural_language(request, q)
 
     # 2) Fetch OSDR
     osdr_query_params = _build_params(**params)
     data = await _fetch_assays(osdr_query_params)
-
-    logger.info("Fetched OSDR data: %s", data)
 
     async with httpx.AsyncClient() as c:
         applied_url = str(c.build_request("GET", ASSAYS_BASE, params=osdr_query_params).url)
@@ -74,9 +68,7 @@ async def search_assays(
 # ----------------- AI -----------------
 
 def _get_filter_from_natural_language(request: Request, user_input) -> Dict[str, Optional[str]]:
-    logger.info("estoy aqui 1")
     prompt = GetFilterPrompt(user_input)
-    logger.info("estoy aqui 2")
     response_text, _ = request.app.state.provider.prompt(
         model="gpt-3.5-turbo",
         prompt_system=prompt.get_prompt_system(),
@@ -84,17 +76,15 @@ def _get_filter_from_natural_language(request: Request, user_input) -> Dict[str,
         user_input=prompt.get_user_prompt(),
         parameters_json=prompt.get_parameters()
     )
-    logger.info("estoy aqui 3")
+
     if not response_text:
         raise HTTPException(status_code=500, detail="No se obtuvo respuesta de la IA.")
 
     import json
-    logger.info("estoy aqui 4")
+
     try:
         response = json.loads(response_text)
-        logger.info("estoy aqui 5")
     except Exception:
-        logger.info("estoy aqui 6")
         start = response_text.find("{"); end = response_text.rfind("}")
         if start == -1 or end == -1:
             raise HTTPException(status_code=500, detail="No se pudo parsear JSON de la respuesta.")
@@ -285,16 +275,12 @@ def _build_params(
 
 async def _fetch_assays(params: List[Tuple[str, str]]) -> Any:
     try:
-        logger.info("Fetching assays with params: %s", params)
         async with httpx.AsyncClient(timeout=20.0, follow_redirects=True) as client:
-            logger.info("Requesting OSDR: %s", ASSAYS_BASE)
             r = await client.get(ASSAYS_BASE, params=params)
-            logger.info("OSDR response status: %s", r.status_code)
             if r.status_code >= 400:
                 raise HTTPException(status_code=r.status_code, detail=f"OSDR error: {r.text}")
             return r.json()
     except HTTPException:
         raise
     except Exception as e:
-        logger.error("Error fetching assays: %s", e)
         raise HTTPException(status_code=502, detail=f"Error consultando OSDR: {e}")

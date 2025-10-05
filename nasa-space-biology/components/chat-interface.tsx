@@ -56,7 +56,7 @@ export function ChatInterface() {
     ensureChat().catch((err) => {
       console.error("Failed to initialise chat", err)
     })
-  }, [ensureChat])
+  }, [])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
