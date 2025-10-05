@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronDown, Gem, Menu, Radar, X } from "lucide-react"
+import { ChevronDown, Gem, Menu, Radar, Rocket, X } from "lucide-react"
 
 import {
   DropdownMenu,
@@ -32,6 +32,15 @@ const searcherLinks = [
     href: "/assay-finder",
     description: "Surface experimental assays grouped by technology.",
     icon: Radar,
+  },
+]
+
+const architectLinks = [
+  {
+    name: "Mission Planner",
+    href: "/mission-planner",
+    description: "Co-design mission timelines, risks, and resource plans.",
+    icon: Rocket,
   },
 ]
 
@@ -103,14 +112,22 @@ export function Header() {
             <DropdownMenuTrigger className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/60 px-4 py-2 font-mono text-sm uppercase tracking-[0.3em] text-muted-foreground transition hover:border-primary/50 hover:text-foreground">
               Mission Architects <ChevronDown className="h-3.5 w-3.5" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="center" className="min-w-[240px] border-border/60 bg-background/95 text-foreground">
+            <DropdownMenuContent align="center" className="min-w-[260px] border-border/60 bg-background/95 text-foreground">
               <DropdownMenuLabel className="text-xs uppercase tracking-[0.35em] text-muted-foreground">
-                Coming soon
+                Mission tooling
               </DropdownMenuLabel>
               <DropdownMenuSeparator className="bg-border/60" />
-              <DropdownMenuItem disabled className="px-3 py-2 text-xs text-muted-foreground">
-                Mission tools will appear here shortly.
-              </DropdownMenuItem>
+              {architectLinks.map((item) => (
+                <DropdownMenuItem key={item.href} asChild className="px-3 py-2">
+                  <Link href={item.href} className="flex items-start gap-3">
+                    <item.icon className="mt-0.5 h-4 w-4 text-primary" />
+                    <span>
+                      <span className="block font-mono text-sm text-foreground">{item.name}</span>
+                      <span className="block text-xs text-muted-foreground">{item.description}</span>
+                    </span>
+                  </Link>
+                </DropdownMenuItem>
+              ))}
             </DropdownMenuContent>
           </DropdownMenu>
 
@@ -178,7 +195,16 @@ export function Header() {
 
             <div className="flex flex-col gap-2">
               <span className="font-mono text-xs uppercase tracking-[0.3em] text-muted-foreground">Mission Architects</span>
-              <span className="text-sm text-muted-foreground">Coming soon</span>
+              {architectLinks.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={closeMenu}
+                  className="text-sm text-foreground"
+                >
+                  {item.name}
+                </Link>
+              ))}
             </div>
 
             <div className="flex flex-col gap-2">

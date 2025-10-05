@@ -62,6 +62,10 @@ interface ChatAPI {
     chatUuid: string,
     body: { message: string; metodo: string },
   ) => Promise<AxiosResponse<{ answer: string }> | undefined>
+  planMission: (
+    chatUuid: string,
+    body: { message: string; metodo: string },
+  ) => Promise<AxiosResponse<{ plan: unknown } | { answer: string }> | undefined>
 }
 
 export interface APIContextValue {
@@ -225,6 +229,8 @@ export const APIProvider = ({ children }: PropsWithChildren) => {
     create: () => apiMethods.get(`${BASE_URL}/api/v1/chats`),
     sendMessage: (chatUuid, body) =>
       apiMethods.post(`${BASE_URL}/api/v1/chats/${chatUuid}/messages`, body),
+    planMission: (chatUuid, body) =>
+      apiMethods.post(`${BASE_URL}/api/v1/chats/${chatUuid}/astroplan`, body),
   }
 
   return (
