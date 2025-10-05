@@ -7,9 +7,9 @@ import { APIProvider } from '@/APIContext'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: 'Stellar Mind AI',
+  description: 'Created by Stellar Minds',
+  generator: 'stellar.mind.ai',
 }
 
 export default function RootLayout({
