@@ -4,12 +4,14 @@ import type React from "react"
 
 import { useState, useRef, useEffect, useCallback } from "react"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Sparkles } from "lucide-react"
+import { ArrowRight, Rocket, Sparkles, User } from "lucide-react"
 import { useAPI } from "@/APIContext"
 
 interface Message {
+  id: string
   role: "user" | "assistant"
   content: string
+  streaming?: boolean
 }
 
 export function ChatInterface() {
@@ -21,6 +23,16 @@ export function ChatInterface() {
   const [chatUuid, setChatUuid] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
   const messagesEndRef = useRef<HTMLDivElement>(null)
+  const streamingTimers = useRef<Array<ReturnType<typeof setInterval>>>([])
+
+  useEffect(() => {
+    return () => {
+      streamingTimers.current.forEach((timer) => clearInterval(timer))
+      streamingTimers.current = []
+    }
+  }, [])
+
+  const createMessageId = (prefix: string) => `${prefix}-${Date.now()}-${Math.random().toString(16).slice(2, 8)}`
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
@@ -65,7 +77,7 @@ export function ChatInterface() {
     const userMessage = input.trim()
     setInput("")
     setError(null)
-    setMessages((prev) => [...prev, { role: "user", content: userMessage }])
+    setMessages((prev) => [...prev, { id: createMessageId("user"), role: "user", content: userMessage }])
     setIsLoading(true)
 
     try {
@@ -81,15 +93,48 @@ export function ChatInterface() {
       }
 
       const cleanedAnswer = assistantReply.replace(/\\n/g, "\n")
-
-      setMessages((prev) => [...prev, { role: "assistant", content: cleanedAnswer }])
+      streamAssistantMessage(cleanedAnswer)
     } catch (err) {
       const message = err instanceof Error ? err.message : "Unable to fetch a response right now."
       setError(message)
-      setMessages((prev) => [...prev, { role: "assistant", content: message }])
+      setMessages((prev) => [...prev, { id: createMessageId("assistant"), role: "assistant", content: message }])
     } finally {
       setIsLoading(false)
     }
+  }
+
+  const streamAssistantMessage = (text: string) => {
+    const messageId = createMessageId("assistant")
+    const characters = Array.from(text)
+    const total = characters.length
+    setMessages((prev) => [...prev, { id: messageId, role: "assistant", content: "", streaming: true }])
+
+    let index = 0
+    const step = Math.max(1, Math.floor(total / 120))
+
+    const timer = setInterval(() => {
+      index = Math.min(total, index + step)
+      const nextContent = characters.slice(0, index).join("")
+      setMessages((prev) => {
+        const updated = prev.map((message) =>
+          message.id === messageId
+            ? {
+                ...message,
+                content: nextContent,
+                streaming: index < total,
+              }
+            : message,
+        )
+        return updated
+      })
+
+      if (index >= total) {
+        clearInterval(timer)
+        streamingTimers.current = streamingTimers.current.filter((stored) => stored !== timer)
+      }
+    }, 18)
+
+    streamingTimers.current.push(timer)
   }
 
   const suggestedQuestions = [
@@ -100,8 +145,8 @@ export function ChatInterface() {
   ]
 
   return (
-    <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-16">
-      <div className="w-full max-w-4xl mx-auto">
+    <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 py-16">
+      <div className="mx-auto w-full max-w-4xl">
         {messages.length === 0 ? (
           // Initial state - similar to Dora AI
           <div className="flex flex-col items-center justify-center space-y-8 text-center">
@@ -158,27 +203,54 @@ export function ChatInterface() {
         ) : (
           // Chat messages view
           <div className="flex flex-col space-y-6">
-            <div className="flex-1 space-y-6 mb-24">
-              {messages.map((message, index) => (
-                <div key={index} className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}>
+            <div className="mb-24 flex-1 space-y-6">
+              {messages.map((message) => (
+                <div
+                  key={message.id}
+                  className={`flex items-start gap-3 ${message.role === "user" ? "justify-end" : "justify-start"}`}
+                >
+                  {message.role === "assistant" ? (
+                    <span
+                      className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-border/40 bg-purple-500/20 text-purple-100"
+                      aria-hidden
+                    >
+                      <Rocket className="h-4 w-4" />
+                    </span>
+                  ) : null}
+
                   <div
-                    className={`max-w-[80%] px-6 py-4 rounded-2xl font-mono ${
+                    className={`max-w-[80%] rounded-2xl px-4 py-3 font-mono text-sm leading-relaxed ${
                       message.role === "user"
-                        ? "bg-primary text-primary-foreground"
-                        : "bg-card/50 backdrop-blur-sm border border-border/50 text-foreground"
+                        ? "bg-sky-500/20 text-sky-100"
+                        : "border border-border/50 bg-card/60 text-slate-100 backdrop-blur"
                     }`}
                   >
-                    {message.content}
+                    <div className="whitespace-pre-line text-left">
+                      {message.content}
+                      {message.streaming ? <span className="ml-1 inline-block animate-pulse">▮</span> : null}
+                    </div>
                   </div>
+
+                  {message.role === "user" ? (
+                    <span
+                      className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-border/40 bg-sky-500/30 text-sky-100"
+                      aria-hidden
+                    >
+                      <User className="h-4 w-4" />
+                    </span>
+                  ) : null}
                 </div>
               ))}
               {isLoading && (
                 <div className="flex justify-start">
-                  <div className="max-w-[80%] px-6 py-4 rounded-2xl font-mono bg-card/50 backdrop-blur-sm border border-border/50">
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-primary rounded-full animate-bounce" />
-                      <div className="w-2 h-2 bg-primary rounded-full animate-bounce [animation-delay:0.2s]" />
-                      <div className="w-2 h-2 bg-primary rounded-full animate-bounce [animation-delay:0.4s]" />
+                  <div className="flex max-w-[80%] items-center gap-3 rounded-2xl border border-border/50 bg-card/60 px-4 py-3 font-mono backdrop-blur">
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border/40 bg-purple-500/20 text-purple-100" aria-hidden>
+                      <Rocket className="h-4 w-4 animate-pulse" />
+                    </span>
+                    <div className="flex items-center gap-1">
+                      <div className="h-2 w-2 animate-bounce rounded-full bg-primary" />
+                      <div className="h-2 w-2 animate-bounce rounded-full bg-primary [animation-delay:0.2s]" />
+                      <div className="h-2 w-2 animate-bounce rounded-full bg-primary [animation-delay:0.4s]" />
                     </div>
                   </div>
                 </div>
@@ -187,8 +259,8 @@ export function ChatInterface() {
             </div>
 
             {/* Fixed input at bottom */}
-            <div className="fixed bottom-0 left-0 right-0 z-40 bg-background/80 backdrop-blur-xl border-t border-border/50 p-4">
-              <form onSubmit={handleSubmit} className="max-w-4xl mx-auto">
+            <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-border/50 bg-background/80 p-4 backdrop-blur-xl">
+              <form onSubmit={handleSubmit} className="mx-auto max-w-4xl">
                 <div className="relative group">
                   <input
                     type="text"
