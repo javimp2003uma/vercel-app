@@ -6,7 +6,7 @@ from collections import defaultdict, Counter
 import itertools
 
 # ⬇️ Asegúrate de tener este prompt en tu proyecto (como ya lo tienes)
-from ai import GetGapFilterPrompt
+from ..ai import GetGapFilterPrompt
 
 router = APIRouter()
 

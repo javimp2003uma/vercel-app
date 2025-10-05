@@ -3,7 +3,7 @@ from typing import Optional, List, Tuple, Any, Dict
 from urllib.parse import quote
 from fastapi import APIRouter, HTTPException, Query, Request
 import logging
-from ai import GetFilterPrompt
+from ..ai import GetFilterPrompt
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
