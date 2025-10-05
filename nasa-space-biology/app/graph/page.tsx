@@ -1,6 +1,7 @@
 import { Graph3D } from "@/components/graph-3d"
 import { SpaceBackground } from "@/components/space-background"
 import { graphData } from "@/lib/graph-data"
+import { Orbit } from "lucide-react"
 
 export default function GraphPage() {
   const nodeCount = graphData.nodes.length
@@ -17,8 +18,8 @@ export default function GraphPage() {
       <section className="relative z-10 py-24">
         <div className="container mx-auto flex flex-col gap-12 px-4">
           <header className="text-center">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-1 font-mono text-xs uppercase tracking-[0.3em] text-purple-100">
-              <span aria-hidden>🛰️</span> Knowledge Graph
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-500/10 px-4 py-1 font-mono text-xs uppercase tracking-[0.3em] text-sky-100">
+              <Orbit className="h-3.5 w-3.5" aria-hidden /> Knowledge Graph
             </div>
             <h1 className="text-balance font-mono text-4xl font-bold text-white sm:text-5xl">
               Navigate NASA's Space Biology Universe
