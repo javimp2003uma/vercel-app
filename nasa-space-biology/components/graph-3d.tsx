@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useMemo, useRef, useState } from "react"
+import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import * as THREE from "three"
 
 import type { GraphData, GraphNode, GraphEdge } from "@/lib/graph-data"
@@ -339,7 +339,16 @@ export function Graph3D({ graph }: Graph3DProps) {
   }, [communityIds.length])
 
   const { data, legend } = useMemo(() => {
-    const communityRegistry = new Map<number, { assetIndex: number; count: number; label: number }>()
+    const communityRegistry = new Map<
+      number,
+      {
+        assetIndex: number
+        count: number
+        label: number
+        categoryName: string
+        nodeIds: Array<string | number>
+      }
+    >()
 
     const nodes: VisualNode[] = graph.nodes.map((node) => {
       const group = node.community ?? -1
@@ -349,11 +358,14 @@ export function Graph3D({ graph }: Graph3DProps) {
           assetIndex: assignedIndex,
           count: 0,
           label: communityRegistry.size + 1,
+          categoryName: node.category ?? node.label ?? `Community ${communityRegistry.size + 1}`,
+          nodeIds: [],
         })
       }
 
       const entry = communityRegistry.get(group)!
       entry.count += 1
+      entry.nodeIds.push(node.id)
 
       return {
         ...node,
@@ -392,10 +404,12 @@ export function Graph3D({ graph }: Graph3DProps) {
           group,
           label: info.label,
           planetName: asset?.name ?? presetFallback?.name ?? "",
+          categoryName: info.categoryName,
           icon: asset?.icon ?? presetFallback?.icon ?? "🪐",
           preview: asset?.preview ?? null,
           accent: asset?.accent ?? presetFallback?.accent ?? "#38bdf8",
           count: info.count,
+          nodeIds: info.nodeIds,
         }
       })
 
@@ -468,9 +482,67 @@ export function Graph3D({ graph }: Graph3DProps) {
     }
   }, [ForceGraphComponent, data])
 
+  const handleFocusCommunity = useCallback(
+    (nodeIds: Array<string | number>) => {
+      const fg = graphRef.current
+      if (!fg || !nodeIds.length) return
+
+      const nodeIdSet = new Set(nodeIds.map(String))
+      const graphNodes = (data.nodes ?? []) as VisualNode[]
+      const selected = graphNodes.filter((node) => nodeIdSet.has(String(node.id)))
+      if (!selected.length) return
+
+      const center = selected.reduce(
+        (acc, node) => {
+          acc.x += node.x ?? 0
+          acc.y += node.y ?? 0
+          acc.z += node.z ?? 0
+          return acc
+        },
+        { x: 0, y: 0, z: 0 },
+      )
+
+      center.x /= selected.length
+      center.y /= selected.length
+      center.z /= selected.length
+
+      const radius = selected.reduce((max, node) => {
+        const dx = (node.x ?? 0) - center.x
+        const dy = (node.y ?? 0) - center.y
+        const dz = (node.z ?? 0) - center.z
+        const dist = Math.sqrt(dx * dx + dy * dy + dz * dz)
+        return Math.max(max, dist)
+      }, 1)
+
+      const distance = Math.max(radius * 2.2, 80)
+
+      const controls = fg.controls?.()
+      if (controls) {
+        ;(controls as any).autoRotate = false
+        controls.target.set(center.x, center.y, center.z)
+      }
+
+      const camera = fg.camera?.()
+      if (camera && typeof fg.cameraPosition === "function") {
+        const currentPos = camera.position.clone()
+        const currentTarget = controls ? controls.target.clone() : new THREE.Vector3()
+        let direction = currentPos.sub(currentTarget)
+        if (direction.lengthSq() === 0) {
+          direction = new THREE.Vector3(0, 0, 1)
+        }
+        direction.normalize()
+        const newPosition = new THREE.Vector3(center.x, center.y, center.z).add(direction.multiplyScalar(distance))
+        fg.cameraPosition({ x: newPosition.x, y: newPosition.y, z: newPosition.z }, center, 1000)
+      } else {
+        fg.zoomToFit?.(800, 80, (node) => nodeIdSet.has(String((node as VisualNode).id)))
+      }
+    },
+    [data],
+  )
+
   return (
-    <div className="relative">
-      <div className="relative h-[600px] w-full overflow-hidden rounded-2xl border border-border/50 bg-card/80 shadow-xl">
+    <div className="relative flex w-full flex-col gap-8">
+      <div className="relative h-[600px] w-full overflow-hidden rounded-3xl border border-slate-500/30 bg-slate-900/70 shadow-[0_0_40px_-20px_rgba(168,85,247,0.6)] backdrop-blur-xl">
         {ForceGraphComponent ? (
           <ForceGraphComponent
             ref={graphRef}
@@ -569,7 +641,7 @@ export function Graph3D({ graph }: Graph3DProps) {
       ) : null}
 
       {hoveredLink ? (
-        <div className="pointer-events-none absolute left-6 bottom-6 max-w-sm rounded-lg border border-border/60 bg-background/90 p-4 shadow-lg backdrop-blur-md">
+        <div className="pointer-events-none absolute left-6 top-6 max-w-sm rounded-lg border border-border/60 bg-background/90 p-4 shadow-lg backdrop-blur-md">
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-muted-foreground">Connection</p>
           <p className="mt-2 font-mono text-sm font-semibold text-foreground">
             {hoveredLink.source.name} ➜ {hoveredLink.target.name}
@@ -589,9 +661,9 @@ export function Graph3D({ graph }: Graph3DProps) {
         </div>
       ) : null}
 
-      <div className="mt-6 grid gap-2 rounded-xl border border-border/40 bg-card/60 p-4 backdrop-blur-sm sm:grid-cols-2 lg:grid-cols-3">
-        {legend.map(({ group, label, planetName, icon, preview, accent, count }) => (
-          <div key={group} className="flex items-center justify-between gap-3 text-xs text-muted-foreground">
+      <div className="mt-6 grid gap-3 rounded-3xl border border-slate-600/30 bg-slate-900/60 p-6 backdrop-blur-sm sm:grid-cols-2 lg:grid-cols-3">
+        {legend.map(({ group, categoryName, planetName, icon, preview, accent, count, nodeIds }) => (
+          <div key={group} className="flex flex-wrap items-center justify-between gap-3 text-xs text-muted-foreground">
             <div className="flex items-center gap-3">
               <span
                 className="h-8 w-8 overflow-hidden rounded-full border border-border/40"
@@ -604,13 +676,22 @@ export function Graph3D({ graph }: Graph3DProps) {
                 aria-hidden
               />
               <div>
-                <p className="font-mono text-foreground">Community #{label}</p>
+                <p className="font-mono text-foreground">{categoryName}</p>
                 <p className="mt-0.5 text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
                   {icon} {planetName}
                 </p>
               </div>
             </div>
-            <span>{count} nodes</span>
+            <div className="flex items-center gap-3">
+              <span>{count} nodes</span>
+              <button
+                type="button"
+                onClick={() => handleFocusCommunity(nodeIds)}
+                className="inline-flex items-center rounded-full border border-border/60 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground transition hover:border-primary/50 hover:text-foreground"
+              >
+                Focus
+              </button>
+            </div>
           </div>
         ))}
       </div>

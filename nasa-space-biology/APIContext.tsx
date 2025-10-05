@@ -19,6 +19,8 @@ const apiClient = axios.create({
   withCredentials: true,
 })
 
+//https://chatbot.topocal.com
+
 type HttpMethod = 'get' | 'post' | 'put' | 'delete'
 type EndpointMethod = (...args: any[]) => Promise<AxiosResponse<any> | undefined> | void
 
@@ -49,6 +51,11 @@ interface AssaysAPI {
   search: <T = unknown>(query: string) => Promise<AxiosResponse<T> | undefined>
 }
 
+interface GapsAPI {
+  search: <T = unknown>(query: string) => Promise<AxiosResponse<T> | undefined>
+  getOptions: <T = unknown>() => Promise<AxiosResponse<T> | undefined>
+}
+
 interface ChatAPI {
   create: () => Promise<AxiosResponse<{ chat_uuid: string }> | undefined>
   sendMessage: (
@@ -66,6 +73,7 @@ export interface APIContextValue {
   users: EndpointGroup
   authAPI: AuthAPI
   assays: AssaysAPI
+  gaps: GapsAPI
   chat: ChatAPI
   axios: ApiMethods
 }
@@ -208,6 +216,11 @@ export const APIProvider = ({ children }: PropsWithChildren) => {
     search: (query) => apiMethods.get(`${BASE_URL}/api/v1/assays/search?q=${encodeURIComponent(query)}`),
   }
 
+  const gapsAPI: GapsAPI = {
+    search: (query) => apiMethods.get(`${BASE_URL}/api/v1/gaps/search?q=${encodeURIComponent(query)}`),
+    getOptions: () => apiMethods.get(`${BASE_URL}/api/v1/gaps/options`),
+  }
+
   const chatAPI: ChatAPI = {
     create: () => apiMethods.get(`${BASE_URL}/api/v1/chats`),
     sendMessage: (chatUuid, body) =>
@@ -225,6 +238,7 @@ export const APIProvider = ({ children }: PropsWithChildren) => {
         users: usersAPI,
         authAPI,
         assays: assaysAPI,
+        gaps: gapsAPI,
         chat: chatAPI,
         axios: apiMethods,
       }}

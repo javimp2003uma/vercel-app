@@ -209,9 +209,7 @@ export function AssayFinder() {
 
   const handleUseSample = () => {
     setPrompt("Show me all RNA sequencing assays with flight and ground controls")
-    setResults(exampleData)
     setError(null)
-    setIsSample(true)
   }
 
   return (

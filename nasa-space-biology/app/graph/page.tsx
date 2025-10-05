@@ -15,33 +15,35 @@ export default function GraphPage() {
       <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-1/2 bg-gradient-to-b from-sky-400/30 via-transparent to-transparent blur-3xl" />
 
       <section className="relative z-10 py-24">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto mb-16 max-w-3xl text-center">
-            <p className="mb-4 font-mono text-sm uppercase tracking-[0.3em] text-primary/80">Knowledge Map</p>
-            <h1 className="mb-6 font-mono text-4xl font-bold text-foreground sm:text-5xl">
-              Explore the Stellar Minds 3D Graph
+        <div className="container mx-auto flex flex-col gap-12 px-4">
+          <header className="text-center">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-1 font-mono text-xs uppercase tracking-[0.3em] text-purple-100">
+              <span aria-hidden>🛰️</span> Knowledge Graph
+            </div>
+            <h1 className="text-balance font-mono text-4xl font-bold text-white sm:text-5xl">
+              Navigate NASA's Space Biology Universe
             </h1>
-            <p className="text-lg text-muted-foreground text-balance">
-              Each node captures a key concept or mission within the Stellar Minds knowledge base. Dive into the graph to
-              uncover relationships, communities, and research linkages across space biology.
+            <p className="mx-auto mt-4 max-w-3xl text-balance text-sm text-slate-200/80 sm:text-base">
+              Explore the communities powering the mission. Each planetary cluster groups related experiments, assays, and
+              publications so you can spot the orbits where investment accelerates discovery.
             </p>
-          </div>
+          </header>
 
-          <div className="mb-16 grid gap-6 sm:grid-cols-3">
-            <div className="rounded-2xl border border-border/40 bg-card/60 p-6 backdrop-blur-sm">
-              <p className="font-mono text-sm uppercase tracking-widest text-muted-foreground">Nodes</p>
-              <p className="mt-2 text-3xl font-bold text-foreground">{nodeCount}</p>
-              <p className="text-sm text-muted-foreground">Key entities represented inside the graph.</p>
+          <div className="grid gap-4 sm:grid-cols-3">
+            <div className="rounded-3xl border border-slate-600/40 bg-slate-900/70 p-6 text-center text-slate-200 shadow-[0_0_30px_-15px_rgba(56,189,248,0.5)]">
+              <p className="font-mono text-4xl font-bold text-sky-300">{nodeCount}</p>
+              <p className="mt-1 text-xs uppercase tracking-[0.3em] text-slate-400">Nodes</p>
+              <p className="mt-2 text-sm text-slate-300/80">Unique experiments, assays, and publications.</p>
             </div>
-            <div className="rounded-2xl border border-border/40 bg-card/60 p-6 backdrop-blur-sm">
-              <p className="font-mono text-sm uppercase tracking-widest text-muted-foreground">Relationships</p>
-              <p className="mt-2 text-3xl font-bold text-foreground">{edgeCount}</p>
-              <p className="text-sm text-muted-foreground">Connections between related concepts.</p>
+            <div className="rounded-3xl border border-slate-600/40 bg-slate-900/70 p-6 text-center text-slate-200 shadow-[0_0_30px_-15px_rgba(236,72,153,0.45)]">
+              <p className="font-mono text-4xl font-bold text-pink-300">{edgeCount}</p>
+              <p className="mt-1 text-xs uppercase tracking-[0.3em] text-slate-400">Connections</p>
+              <p className="mt-2 text-sm text-slate-300/80">Knowledge links mapped across the repository.</p>
             </div>
-            <div className="rounded-2xl border border-border/40 bg-card/60 p-6 backdrop-blur-sm">
-              <p className="font-mono text-sm uppercase tracking-widest text-muted-foreground">Communities</p>
-              <p className="mt-2 text-3xl font-bold text-foreground">{communityCount}</p>
-              <p className="text-sm text-muted-foreground">Affinity clusters discovered in the network.</p>
+            <div className="rounded-3xl border border-slate-600/40 bg-slate-900/70 p-6 text-center text-slate-200 shadow-[0_0_30px_-15px_rgba(168,85,247,0.5)]">
+              <p className="font-mono text-4xl font-bold text-purple-300">{communityCount}</p>
+              <p className="mt-1 text-xs uppercase tracking-[0.3em] text-slate-400">Communities</p>
+              <p className="mt-2 text-sm text-slate-300/80">Coordinated clusters of mission activity.</p>
             </div>
           </div>
 

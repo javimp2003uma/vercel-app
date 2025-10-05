@@ -1,0 +1,2868 @@
+{
+  "applied_url": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/assays/?format=json.records&study.characteristics.organism=Mus+musculus%7CHomo+sapiens&study.characteristics.organism=&investigation.study+assays.study+assay+technology+type=RNA+Sequencing+%28RNA-Seq%29%7CProteomics&investigation.study+assays.study+assay+technology+type=&%3Dstudy.factor+value.spaceflight=&id.accession=&id.assay+name=&study.factor+value.spaceflight=&study.characteristics=",
+  "highlights": [
+    {
+      "organism": "Mus musculus",
+      "tissue": "Left Kidney",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics",
+      "score": 3.92,
+      "reason": "Fuerte base en tierra y falta en vuelo.",
+      "reasons_detail": [
+        {
+          "type": "GroundBase",
+          "value": 1,
+          "evidence": {
+            "ds_ground": 5,
+            "ground_examples": [
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-102/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-163/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-462/?format=html"
+            ]
+          },
+          "text": "Fuerte base en tierra: 5 dataset(s) Ground/Analog ya existen en Mus musculus/Left Kidney."
+        },
+        {
+          "type": "MultiOmics",
+          "value": 1,
+          "evidence": {
+            "present_layers": [
+              "RNA Sequencing (RNA-Seq)"
+            ],
+            "missing_layer": "Proteomics"
+          },
+          "text": "Completa multi-ómics: hay RNA Sequencing (RNA-Seq); falta Proteomics."
+        },
+        {
+          "type": "NeighborDensity",
+          "value": 1,
+          "text": "Alta actividad cercana en Left Kidney/Spaceflight."
+        }
+      ]
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Liver",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics",
+      "score": 3.92,
+      "reason": "Fuerte base en tierra y falta en vuelo.",
+      "reasons_detail": [
+        {
+          "type": "GroundBase",
+          "value": 1,
+          "evidence": {
+            "ds_ground": 10,
+            "ground_examples": [
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-47/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-242/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-164/?format=html"
+            ]
+          },
+          "text": "Fuerte base en tierra: 10 dataset(s) Ground/Analog ya existen en Mus musculus/Liver."
+        },
+        {
+          "type": "MultiOmics",
+          "value": 1,
+          "evidence": {
+            "present_layers": [
+              "RNA Sequencing (RNA-Seq)"
+            ],
+            "missing_layer": "Proteomics"
+          },
+          "text": "Completa multi-ómics: hay RNA Sequencing (RNA-Seq); falta Proteomics."
+        },
+        {
+          "type": "NeighborDensity",
+          "value": 1,
+          "text": "Alta actividad cercana en Liver/Spaceflight."
+        }
+      ]
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Spleen",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics",
+      "score": 3.92,
+      "reason": "Fuerte base en tierra y falta en vuelo.",
+      "reasons_detail": [
+        {
+          "type": "GroundBase",
+          "value": 1,
+          "evidence": {
+            "ds_ground": 5,
+            "ground_examples": [
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-246/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-164/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-288/?format=html"
+            ]
+          },
+          "text": "Fuerte base en tierra: 5 dataset(s) Ground/Analog ya existen en Mus musculus/Spleen."
+        },
+        {
+          "type": "MultiOmics",
+          "value": 1,
+          "evidence": {
+            "present_layers": [
+              "RNA Sequencing (RNA-Seq)"
+            ],
+            "missing_layer": "Proteomics"
+          },
+          "text": "Completa multi-ómics: hay RNA Sequencing (RNA-Seq); falta Proteomics."
+        },
+        {
+          "type": "NeighborDensity",
+          "value": 1,
+          "text": "Alta actividad cercana en Spleen/Spaceflight."
+        }
+      ]
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Thymu",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics",
+      "score": 3.92,
+      "reason": "Fuerte base en tierra y falta en vuelo.",
+      "reasons_detail": [
+        {
+          "type": "GroundBase",
+          "value": 1,
+          "evidence": {
+            "ds_ground": 5,
+            "ground_examples": [
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-421/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-457/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-244/?format=html"
+            ]
+          },
+          "text": "Fuerte base en tierra: 5 dataset(s) Ground/Analog ya existen en Mus musculus/Thymu."
+        },
+        {
+          "type": "MultiOmics",
+          "value": 1,
+          "evidence": {
+            "present_layers": [
+              "RNA Sequencing (RNA-Seq)"
+            ],
+            "missing_layer": "Proteomics"
+          },
+          "text": "Completa multi-ómics: hay RNA Sequencing (RNA-Seq); falta Proteomics."
+        },
+        {
+          "type": "NeighborDensity",
+          "value": 1,
+          "text": "Alta actividad cercana en Thymu/Spaceflight."
+        }
+      ]
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Dorsal Skin",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics",
+      "score": 3.77,
+      "reason": "Fuerte base en tierra y falta en vuelo.",
+      "reasons_detail": [
+        {
+          "type": "GroundBase",
+          "value": 1,
+          "evidence": {
+            "ds_ground": 4,
+            "ground_examples": [
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-254/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-240/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-243/?format=html"
+            ]
+          },
+          "text": "Fuerte base en tierra: 4 dataset(s) Ground/Analog ya existen en Mus musculus/Dorsal Skin."
+        },
+        {
+          "type": "MultiOmics",
+          "value": 1,
+          "evidence": {
+            "present_layers": [
+              "RNA Sequencing (RNA-Seq)"
+            ],
+            "missing_layer": "Proteomics"
+          },
+          "text": "Completa multi-ómics: hay RNA Sequencing (RNA-Seq); falta Proteomics."
+        },
+        {
+          "type": "NeighborDensity",
+          "value": 0.8,
+          "text": "Alta actividad cercana en Dorsal Skin/Spaceflight."
+        }
+      ]
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Adrenal Gland",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics",
+      "score": 3.6,
+      "reason": "Fuerte base en tierra y falta en vuelo.",
+      "reasons_detail": [
+        {
+          "type": "GroundBase",
+          "value": 1,
+          "evidence": {
+            "ds_ground": 3,
+            "ground_examples": [
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-161/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-98/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-512/?format=html"
+            ]
+          },
+          "text": "Fuerte base en tierra: 3 dataset(s) Ground/Analog ya existen en Mus musculus/Adrenal Gland."
+        },
+        {
+          "type": "MultiOmics",
+          "value": 1,
+          "evidence": {
+            "present_layers": [
+              "RNA Sequencing (RNA-Seq)"
+            ],
+            "missing_layer": "Proteomics"
+          },
+          "text": "Completa multi-ómics: hay RNA Sequencing (RNA-Seq); falta Proteomics."
+        },
+        {
+          "type": "NeighborDensity",
+          "value": 0.6,
+          "text": "Alta actividad cercana en Adrenal Gland/Spaceflight."
+        }
+      ]
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Heart",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics",
+      "score": 3.6,
+      "reason": "Fuerte base en tierra y falta en vuelo.",
+      "reasons_detail": [
+        {
+          "type": "GroundBase",
+          "value": 1,
+          "evidence": {
+            "ds_ground": 3,
+            "ground_examples": [
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-599/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-580/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-270/?format=html"
+            ]
+          },
+          "text": "Fuerte base en tierra: 3 dataset(s) Ground/Analog ya existen en Mus musculus/Heart."
+        },
+        {
+          "type": "MultiOmics",
+          "value": 1,
+          "evidence": {
+            "present_layers": [
+              "RNA Sequencing (RNA-Seq)"
+            ],
+            "missing_layer": "Proteomics"
+          },
+          "text": "Completa multi-ómics: hay RNA Sequencing (RNA-Seq); falta Proteomics."
+        },
+        {
+          "type": "NeighborDensity",
+          "value": 0.6,
+          "text": "Alta actividad cercana en Heart/Spaceflight."
+        }
+      ]
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Whole Blood",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics",
+      "score": 3.45,
+      "reason": "Completar paquete multi-ómics.",
+      "reasons_detail": [
+        {
+          "type": "MultiOmics",
+          "value": 1,
+          "evidence": {
+            "present_layers": [
+              "RNA Sequencing (RNA-Seq)"
+            ],
+            "missing_layer": "Proteomics"
+          },
+          "text": "Completa multi-ómics: hay RNA Sequencing (RNA-Seq); falta Proteomics."
+        },
+        {
+          "type": "PhaseCritical",
+          "value": 1,
+          "evidence": {
+            "present_phases": [
+              "Ground/Analog",
+              "Pre-flight",
+              "Post-flight",
+              "Spaceflight"
+            ]
+          },
+          "text": "Fase crítica sin datos: falta 'In-flight' o está incompleta respecto a Pre/Post."
+        }
+      ]
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Right Retina",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics",
+      "score": 3.45,
+      "reason": "Fuerte base en tierra y falta en vuelo.",
+      "reasons_detail": [
+        {
+          "type": "GroundBase",
+          "value": 1,
+          "evidence": {
+            "ds_ground": 3,
+            "ground_examples": [
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-397/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-255/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-194/?format=html"
+            ]
+          },
+          "text": "Fuerte base en tierra: 3 dataset(s) Ground/Analog ya existen en Mus musculus/Right Retina."
+        },
+        {
+          "type": "MultiOmics",
+          "value": 1,
+          "evidence": {
+            "present_layers": [
+              "RNA Sequencing (RNA-Seq)"
+            ],
+            "missing_layer": "Proteomics"
+          },
+          "text": "Completa multi-ómics: hay RNA Sequencing (RNA-Seq); falta Proteomics."
+        }
+      ]
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Myoblast",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics",
+      "score": 2.85,
+      "reason": "Completar paquete multi-ómics.",
+      "reasons_detail": [
+        {
+          "type": "GroundBase",
+          "value": 0.67,
+          "evidence": {
+            "ds_ground": 2,
+            "ground_examples": [
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-684/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-781/?format=html"
+            ]
+          },
+          "text": "Fuerte base en tierra: 2 dataset(s) Ground/Analog ya existen en Homo sapiens/Myoblast."
+        },
+        {
+          "type": "MultiOmics",
+          "value": 1,
+          "evidence": {
+            "present_layers": [
+              "RNA Sequencing (RNA-Seq)"
+            ],
+            "missing_layer": "Proteomics"
+          },
+          "text": "Completa multi-ómics: hay RNA Sequencing (RNA-Seq); falta Proteomics."
+        }
+      ]
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Femoral Skin",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics",
+      "score": 2.85,
+      "reason": "Completar paquete multi-ómics.",
+      "reasons_detail": [
+        {
+          "type": "GroundBase",
+          "value": 0.67,
+          "evidence": {
+            "ds_ground": 2,
+            "ground_examples": [
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-793/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-239/?format=html"
+            ]
+          },
+          "text": "Fuerte base en tierra: 2 dataset(s) Ground/Analog ya existen en Mus musculus/Femoral Skin."
+        },
+        {
+          "type": "MultiOmics",
+          "value": 1,
+          "evidence": {
+            "present_layers": [
+              "RNA Sequencing (RNA-Seq)"
+            ],
+            "missing_layer": "Proteomics"
+          },
+          "text": "Completa multi-ómics: hay RNA Sequencing (RNA-Seq); falta Proteomics."
+        }
+      ]
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Left Cerebral Hemisphere",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics",
+      "score": 2.85,
+      "reason": "Completar paquete multi-ómics.",
+      "reasons_detail": [
+        {
+          "type": "GroundBase",
+          "value": 0.67,
+          "evidence": {
+            "ds_ground": 2,
+            "ground_examples": [
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-612/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-613/?format=html"
+            ]
+          },
+          "text": "Fuerte base en tierra: 2 dataset(s) Ground/Analog ya existen en Mus musculus/Left Cerebral Hemisphere."
+        },
+        {
+          "type": "MultiOmics",
+          "value": 1,
+          "evidence": {
+            "present_layers": [
+              "RNA Sequencing (RNA-Seq)"
+            ],
+            "missing_layer": "Proteomics"
+          },
+          "text": "Completa multi-ómics: hay RNA Sequencing (RNA-Seq); falta Proteomics."
+        }
+      ]
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Left Lobe Of The Liver",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics",
+      "score": 2.85,
+      "reason": "Completar paquete multi-ómics.",
+      "reasons_detail": [
+        {
+          "type": "GroundBase",
+          "value": 0.67,
+          "evidence": {
+            "ds_ground": 2,
+            "ground_examples": [
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-379/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-463/?format=html"
+            ]
+          },
+          "text": "Fuerte base en tierra: 2 dataset(s) Ground/Analog ya existen en Mus musculus/Left Lobe Of The Liver."
+        },
+        {
+          "type": "MultiOmics",
+          "value": 1,
+          "evidence": {
+            "present_layers": [
+              "RNA Sequencing (RNA-Seq)"
+            ],
+            "missing_layer": "Proteomics"
+          },
+          "text": "Completa multi-ómics: hay RNA Sequencing (RNA-Seq); falta Proteomics."
+        }
+      ]
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Left Lung",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics",
+      "score": 2.85,
+      "reason": "Completar paquete multi-ómics.",
+      "reasons_detail": [
+        {
+          "type": "GroundBase",
+          "value": 0.67,
+          "evidence": {
+            "ds_ground": 2,
+            "ground_examples": [
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-248/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-464/?format=html"
+            ]
+          },
+          "text": "Fuerte base en tierra: 2 dataset(s) Ground/Analog ya existen en Mus musculus/Left Lung."
+        },
+        {
+          "type": "MultiOmics",
+          "value": 1,
+          "evidence": {
+            "present_layers": [
+              "RNA Sequencing (RNA-Seq)"
+            ],
+            "missing_layer": "Proteomics"
+          },
+          "text": "Completa multi-ómics: hay RNA Sequencing (RNA-Seq); falta Proteomics."
+        }
+      ]
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Left Retina",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics",
+      "score": 2.85,
+      "reason": "Completar paquete multi-ómics.",
+      "reasons_detail": [
+        {
+          "type": "GroundBase",
+          "value": 0.67,
+          "evidence": {
+            "ds_ground": 2,
+            "ground_examples": [
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-397/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-194/?format=html"
+            ]
+          },
+          "text": "Fuerte base en tierra: 2 dataset(s) Ground/Analog ya existen en Mus musculus/Left Retina."
+        },
+        {
+          "type": "MultiOmics",
+          "value": 1,
+          "evidence": {
+            "present_layers": [
+              "RNA Sequencing (RNA-Seq)"
+            ],
+            "missing_layer": "Proteomics"
+          },
+          "text": "Completa multi-ómics: hay RNA Sequencing (RNA-Seq); falta Proteomics."
+        }
+      ]
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Quadriceps Femori",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics",
+      "score": 2.85,
+      "reason": "Completar paquete multi-ómics.",
+      "reasons_detail": [
+        {
+          "type": "GroundBase",
+          "value": 0.67,
+          "evidence": {
+            "ds_ground": 2,
+            "ground_examples": [
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-326/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-401/?format=html"
+            ]
+          },
+          "text": "Fuerte base en tierra: 2 dataset(s) Ground/Analog ya existen en Mus musculus/Quadriceps Femori."
+        },
+        {
+          "type": "MultiOmics",
+          "value": 1,
+          "evidence": {
+            "present_layers": [
+              "RNA Sequencing (RNA-Seq)"
+            ],
+            "missing_layer": "Proteomics"
+          },
+          "text": "Completa multi-ómics: hay RNA Sequencing (RNA-Seq); falta Proteomics."
+        }
+      ]
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Right Hemisphere Of Cerebellum",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics",
+      "score": 2.85,
+      "reason": "Completar paquete multi-ómics.",
+      "reasons_detail": [
+        {
+          "type": "GroundBase",
+          "value": 0.67,
+          "evidence": {
+            "ds_ground": 2,
+            "ground_examples": [
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-561/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-563/?format=html"
+            ]
+          },
+          "text": "Fuerte base en tierra: 2 dataset(s) Ground/Analog ya existen en Mus musculus/Right Hemisphere Of Cerebellum."
+        },
+        {
+          "type": "MultiOmics",
+          "value": 1,
+          "evidence": {
+            "present_layers": [
+              "RNA Sequencing (RNA-Seq)"
+            ],
+            "missing_layer": "Proteomics"
+          },
+          "text": "Completa multi-ómics: hay RNA Sequencing (RNA-Seq); falta Proteomics."
+        }
+      ]
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Right Hippocampu",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics",
+      "score": 2.85,
+      "reason": "Completar paquete multi-ómics.",
+      "reasons_detail": [
+        {
+          "type": "GroundBase",
+          "value": 0.67,
+          "evidence": {
+            "ds_ground": 2,
+            "ground_examples": [
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-562/?format=html",
+              "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-564/?format=html"
+            ]
+          },
+          "text": "Fuerte base en tierra: 2 dataset(s) Ground/Analog ya existen en Mus musculus/Right Hippocampu."
+        },
+        {
+          "type": "MultiOmics",
+          "value": 1,
+          "evidence": {
+            "present_layers": [
+              "RNA Sequencing (RNA-Seq)"
+            ],
+            "missing_layer": "Proteomics"
+          },
+          "text": "Completa multi-ómics: hay RNA Sequencing (RNA-Seq); falta Proteomics."
+        }
+      ]
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Plasma",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics",
+      "score": 2.41,
+      "reason": "Completar paquete multi-ómics.",
+      "reasons_detail": [
+        {
+          "type": "MultiOmics",
+          "value": 1,
+          "evidence": {
+            "present_layers": [
+              "RNA Sequencing (RNA-Seq)"
+            ],
+            "missing_layer": "Proteomics"
+          },
+          "text": "Completa multi-ómics: hay RNA Sequencing (RNA-Seq); falta Proteomics."
+        },
+        {
+          "type": "NeighborDensity",
+          "value": 0.6,
+          "text": "Alta actividad cercana en Plasma/Spaceflight."
+        }
+      ]
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Kidney",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)",
+      "score": 2.4,
+      "reason": "Oportunidad de translación entre especies.",
+      "reasons_detail": [
+        {
+          "type": "SpeciesTranslation",
+          "value": 1,
+          "evidence": {
+            "covered_species": [
+              "Mus musculus"
+            ]
+          },
+          "text": "Translación: cubierta en Mus musculus; falta en Homo sapiens."
+        },
+        {
+          "type": "NeighborDensity",
+          "value": 1,
+          "text": "Alta actividad cercana en Left Kidney/Ground/Analog."
+        },
+        {
+          "type": "Feasibility",
+          "value": 1,
+          "text": "Alta factibilidad: RNA Sequencing (RNA-Seq) es frecuente en el scope."
+        }
+      ]
+    }
+  ],
+  "gaps_total": 361,
+  "gaps": [
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Adrenal Gland",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Adrenal Gland",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Adrenal Gland",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Adrenal Gland",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Aortic Smooth Muscle",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Aortic Smooth Muscle",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Bone Marrow",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Bone Marrow",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Bone Marrow",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Bone Marrow",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Brain",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Brain",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Brain",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Brain",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Brown Adipose Tissue",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Brown Adipose Tissue",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Brown Adipose Tissue",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Brown Adipose Tissue",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Cerebellum",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Cerebellum",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Cerebellum",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Cerebellum",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Cerebrum",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Cerebrum",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Cerebrum",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Cerebrum",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Colon",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Colon",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Colon",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Colon",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Colonic Epithelial Cell",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Colonic Epithelial Cell",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Dermal Microvascular Endothelial Cell",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Dermal Microvascular Endothelial Cell",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Descending Colon",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Descending Colon",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Descending Colon",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Descending Colon",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Dorsal Skin",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Dorsal Skin",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Dorsal Skin",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Dorsal Skin",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Extensor Digitorum Longus",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Extensor Digitorum Longus",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Extensor Digitorum Longus",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Extensor Digitorum Longus",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Eye",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Eye",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Eye",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Eye",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Femoral Lateral Skin",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Femoral Lateral Skin",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Femoral Lateral Skin",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Femoral Lateral Skin",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Femoral Skin",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Femoral Skin",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Femoral Skin",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Femoral Skin",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Gastrocnemiu",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Gastrocnemiu",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Gastrocnemiu",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Gastrocnemiu",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Heart",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Heart",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Heart",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Heart",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Heart Right Ventricle",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Heart Right Ventricle",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Heart Right Ventricle",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Heart Right Ventricle",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Ipsc Derived Cardiomyocyte",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Ipsc Derived Cardiomyocyte",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Ipsc Derived Cortical Organoid",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Ipsc Derived Cortical Organoid",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Ipsc Derived Dopaminergic Organoid",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Ipsc Derived Dopaminergic Organoid",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Kidney",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Kidney",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Kidney",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Kidney",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Kidney Proximal Tubule Epithelial Cell",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Kidney Proximal Tubule Epithelial Cell",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Cerebral Hemisphere",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Cerebral Hemisphere",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Cerebral Hemisphere",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Cerebral Hemisphere",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Eye",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Eye",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Eye",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Eye",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Gastrocnemiu",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Gastrocnemiu",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Gastrocnemiu",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Gastrocnemiu",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Kidney",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Kidney",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Kidney",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Kidney",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Lobe Of The Liver",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Lobe Of The Liver",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Lobe Of The Liver",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Lobe Of The Liver",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Lung",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Lung",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Lung",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Lung",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Quadriceps Femori",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Quadriceps Femori",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Quadriceps Femori",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Quadriceps Femori",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Retina",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Retina",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Retina",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Retina",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Tibialis Anterior",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Tibialis Anterior",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Tibialis Anterior",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Left Tibialis Anterior",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Liver",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Liver",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Liver",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Liver",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Mammary Gland",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Mammary Gland",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Mammary Gland",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Mammary Gland",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Mandible",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Mandible",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Mandible",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Mandible",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Mesenchymal Stem Cell",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Mesenchymal Stem Cell",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Myoblast",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Myoblast",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Myoblast Cell Line",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Myoblast Cell Line",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Myoblast Cell Line",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Myoblast Cell Line",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Myocytes, Cardiac",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Myocytes, Cardiac",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Myocytes, Cardiac",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Peripheral Blood",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Peripheral Blood",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Peripheral Blood",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Plasma",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Plasma",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Plasma",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Quadriceps Femori",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Quadriceps Femori",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Quadriceps Femori",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Quadriceps Femori",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Extensor Digitorum Longu",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Extensor Digitorum Longu",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Extensor Digitorum Longu",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Extensor Digitorum Longu",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Gastrocnemiu",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Gastrocnemiu",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Gastrocnemiu",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Gastrocnemiu",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Hemisphere Of Cerebellum",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Hemisphere Of Cerebellum",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Hemisphere Of Cerebellum",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Hemisphere Of Cerebellum",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Hippocampu",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Hippocampu",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Hippocampu",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Hippocampu",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Kidney",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Kidney",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Kidney",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Kidney",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Quadriceps Femori",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Quadriceps Femori",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Quadriceps Femori",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Quadriceps Femori",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Retina",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Retina",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Retina",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Retina",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Soleu",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Soleu",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Soleu",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Soleu",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Tibialis Anterior",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Tibialis Anterior",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Tibialis Anterior",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Right Tibialis Anterior",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Soleu",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Soleu",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Soleu",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Soleu",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Soleus",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Soleus",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Soleus",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Soleus",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Spleen",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Spleen",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Spleen",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Spleen",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Spleen Distal",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Spleen Distal",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Spleen Distal",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Spleen Distal",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Temporal Bone",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Temporal Bone",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Temporal Bone",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Temporal Bone",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Thymu",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Thymu",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Thymu",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Thymu",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "White Adipose Tissue",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "White Adipose Tissue",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "White Adipose Tissue",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "White Adipose Tissue",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Whole Blood",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Homo sapiens",
+      "tissue": "Whole Blood",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Adrenal Gland",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Adrenal Gland",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Aortic Smooth Muscle",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Aortic Smooth Muscle",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Aortic Smooth Muscle",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Aortic Smooth Muscle",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Bone Marrow",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Bone Marrow",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Brain",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Brain",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Brown Adipose Tissue",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Brown Adipose Tissue",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Cerebellum",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Cerebellum",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Cerebrum",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Cerebrum",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Colon",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Colon",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Colonic Epithelial Cell",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Colonic Epithelial Cell",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Colonic Epithelial Cell",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Colonic Epithelial Cell",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Dermal Microvascular Endothelial Cell",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Dermal Microvascular Endothelial Cell",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Dermal Microvascular Endothelial Cell",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Dermal Microvascular Endothelial Cell",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Descending Colon",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Descending Colon",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Dorsal Skin",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Dorsal Skin",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Extensor Digitorum Longus",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Extensor Digitorum Longus",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Eye",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Eye",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Femoral Lateral Skin",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Femoral Lateral Skin",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Femoral Skin",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Femoral Skin",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Gastrocnemiu",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Gastrocnemiu",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Heart",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Heart",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Heart Right Ventricle",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Heart Right Ventricle",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Ipsc Derived Cardiomyocyte",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Ipsc Derived Cardiomyocyte",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Ipsc Derived Cardiomyocyte",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Ipsc Derived Cardiomyocyte",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Ipsc Derived Cortical Organoid",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Ipsc Derived Cortical Organoid",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Ipsc Derived Cortical Organoid",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Ipsc Derived Cortical Organoid",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Ipsc Derived Dopaminergic Organoid",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Ipsc Derived Dopaminergic Organoid",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Ipsc Derived Dopaminergic Organoid",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Ipsc Derived Dopaminergic Organoid",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Kidney",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Kidney",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Kidney Proximal Tubule Epithelial Cell",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Kidney Proximal Tubule Epithelial Cell",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Kidney Proximal Tubule Epithelial Cell",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Kidney Proximal Tubule Epithelial Cell",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Left Cerebral Hemisphere",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Left Cerebral Hemisphere",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Left Eye",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Left Eye",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Left Gastrocnemiu",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Left Gastrocnemiu",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Left Kidney",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Left Kidney",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Left Lobe Of The Liver",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Left Lobe Of The Liver",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Left Lung",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Left Lung",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Left Quadriceps Femori",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Left Quadriceps Femori",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Left Retina",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Left Retina",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Left Tibialis Anterior",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Left Tibialis Anterior",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Liver",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Liver",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Mammary Gland",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Mammary Gland",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Mandible",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Mandible",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Mesenchymal Stem Cell",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Mesenchymal Stem Cell",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Mesenchymal Stem Cell",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Mesenchymal Stem Cell",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Myoblast",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Myoblast",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Myoblast",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Myoblast",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Myoblast Cell Line",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Myoblast Cell Line",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Myocytes, Cardiac",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Myocytes, Cardiac",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Myocytes, Cardiac",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Myocytes, Cardiac",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Peripheral Blood",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Peripheral Blood",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Peripheral Blood",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Peripheral Blood",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Plasma",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Plasma",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Quadriceps Femori",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Quadriceps Femori",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Right Extensor Digitorum Longu",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Right Extensor Digitorum Longu",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Right Gastrocnemiu",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Right Gastrocnemiu",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Right Hemisphere Of Cerebellum",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Right Hemisphere Of Cerebellum",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Right Hippocampu",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Right Hippocampu",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Right Kidney",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Right Kidney",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Right Quadriceps Femori",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Right Quadriceps Femori",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Right Retina",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Right Retina",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Right Soleu",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Right Soleu",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Right Tibialis Anterior",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Right Tibialis Anterior",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Soleu",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Soleu",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Soleus",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Soleus",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Spleen",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Spleen",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Spleen Distal",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Spleen Distal",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Temporal Bone",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Temporal Bone",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Thymu",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Thymu",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "White Adipose Tissue",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "White Adipose Tissue",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Whole Blood",
+      "condition": "Ground/Analog",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Whole Blood",
+      "condition": "Ground/Analog",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Whole Blood",
+      "condition": "Spaceflight",
+      "assay_type": "Proteomics"
+    },
+    {
+      "organism": "Mus musculus",
+      "tissue": "Whole Blood",
+      "condition": "Spaceflight",
+      "assay_type": "RNA Sequencing (RNA-Seq)"
+    }
+  ]
+}
