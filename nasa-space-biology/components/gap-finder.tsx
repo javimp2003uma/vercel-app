@@ -250,7 +250,7 @@ export function GapFinder() {
   }
 
   const handleUseSample = () => {
-    setPrompt("Show me proteomics gaps where spaceflight is underserved but ground data exists")
+    setPrompt("Show me gaps on experiments about mice")
     setError(null)
   }
 
