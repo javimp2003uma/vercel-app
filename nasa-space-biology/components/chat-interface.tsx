@@ -22,7 +22,7 @@ export function ChatInterface() {
   const [isInitializing, setIsInitializing] = useState(true)
   const [chatUuid, setChatUuid] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
-  const messagesEndRef = useRef<HTMLDivElement>(null)
+  const messagesContainerRef = useRef<HTMLDivElement>(null)
   const streamingTimers = useRef<Array<ReturnType<typeof setInterval>>>([])
 
   useEffect(() => {
@@ -35,7 +35,9 @@ export function ChatInterface() {
   const createMessageId = (prefix: string) => `${prefix}-${Date.now()}-${Math.random().toString(16).slice(2, 8)}`
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+    const container = messagesContainerRef.current
+    if (!container) return
+    container.scrollTo({ top: container.scrollHeight, behavior: "smooth" })
   }
 
   useEffect(() => {
@@ -203,7 +205,10 @@ export function ChatInterface() {
         ) : (
           // Chat messages view
           <div className="flex flex-col space-y-6">
-            <div className="mb-24 flex-1 space-y-6">
+            <div
+              ref={messagesContainerRef}
+              className="mb-28 flex-1 space-y-6 overflow-y-auto pb-28 pr-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden max-h-[72vh]"
+            >
               {messages.map((message) => (
                 <div
                   key={message.id}
@@ -244,7 +249,7 @@ export function ChatInterface() {
               {isLoading && (
                 <div className="flex justify-start">
                   <div className="flex max-w-[80%] items-center gap-3 rounded-2xl border border-border/50 bg-card/60 px-4 py-3 font-mono backdrop-blur">
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border/40 bg-purple-500/20 text-purple-100" aria-hidden>
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-border/40 bg-purple-500/20 text-purple-100" aria-hidden>
                       <Rocket className="h-4 w-4 animate-pulse" />
                     </span>
                     <div className="flex items-center gap-1">
@@ -255,7 +260,6 @@ export function ChatInterface() {
                   </div>
                 </div>
               )}
-              <div ref={messagesEndRef} />
             </div>
 
             {/* Fixed input at bottom */}
